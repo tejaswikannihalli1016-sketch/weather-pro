@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>Smart City</h2>
+
+    <ul>
+
+        <li><i class="fa-solid fa-house"></i> Home</li>
+
+        <li><i class="fa-solid fa-cloud"></i> Weather</li>
+
+        <li><i class="fa-solid fa-map-location-dot"></i> Map</li>
+
+        <li><i class="fa-solid fa-newspaper"></i> News</li>
+
+        <li><i class="fa-solid fa-chart-line"></i> Analytics</li>
+
+        <li><i class="fa-solid fa-gear"></i> Settings</li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Smart City Dashboard</h1>
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search city..."
+id="city">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>Temperature</h3>
+
+<h1 id="temp">--°C</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Humidity</h3>
+
+<h1 id="humidity">--%</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Wind</h3>
+
+<h1 id="wind">-- km/h</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Pressure</h3>
+
+<h1 id="pressure">----</h1>
+
+</div>
+
+</section>
+
+<section class="weather-box">
+
+<div class="left">
+
+<h2 id="cityName">
+
+Search Any City
+
+</h2>
+
+<img
+id="icon"
+src="https://openweathermap.org/img/wn/01d@2x.png">
+
+<p id="description">
+
+Weather Description
+
+</p>
+
+</div>
+
+<div class="right">
+
+<p>
+
+🌡 Feels Like :
+<span id="feels">--</span>
+
+</p>
+
+<p>
+
+💧 Humidity :
+<span id="hum">--</span>
+
+</p>
+
+<p>
+
+🌬 Wind :
+<span id="winds">--</span>
+
+</p>
+
+<p>
+
+👀 Visibility :
+<span id="visibility">--</span>
+
+</p>
+
+<p>
+
+🌅 Sunrise :
+<span id="sunrise">--</span>
+
+</p>
+
+<p>
+
+🌇 Sunset :
+<span id="sunset">--</span>
+
+</p>
+
+</div>
+
+</section>
+
+<section class="forecast">
+
+<h2>7 Day Forecast</h2>
+
+<div class="forecast-box">
+
+<div class="day">
+
+Mon
+
+<h3>30°C</h3>
+
+</div>
+
+<div class="day">
+
+Tue
+
+<h3>31°C</h3>
+
+</div>
+
+<div class="day">
+
+Wed
+
+<h3>29°C</h3>
+
+</div>
+
+<div class="day">
+
+Thu
+
+<h3>32°C</h3>
+
+</div>
+
+<div class="day">
+
+Fri
+
+<h3>30°C</h3>
+
+</div>
+
+<div class="day">
+
+Sat
+
+<h3>28°C</h3>
+
+</div>
+
+<div class="day">
+
+Sun
+
+<h3>27°C</h3>
+
+</div>
+
+</div>
+
+</section>
+<section class="chart">
+
+<h2>Temperature Chart</h2>
+
+<canvas id="tempChart"></canvas>
+
+</section>
+
+<section class="map">
+
+<h2>
+
+Interactive Map
+
+</h2>
+
+<div id="map" class="map-box">
+
+Map will be added here
+
+</div>
+
+</section>
+
+<section class="news">
+
+<h2>
+
+Latest News
+
+</h2>
+
+<div class="news-box">
+
+News API will appear here
+
+</div>
+
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="chart.js"></script>
+<script src="map.js"></script>
+<script src="forecast.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
